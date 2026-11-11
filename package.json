@@ -1,0 +1,17 @@
+{
+  "name": "supplier-management-system",
+  "version": "1.0.0",
+  "description": "Supplier Qualification Management System (SMS) - Live BI Desktop PWA & Android APK",
+  "main": "index.html",
+  "scripts": {
+    "build:web": "rm -rf www && mkdir -p www/assets && cp index.html styles.css app.js manifest.json service-worker.js www/ && cp -r assets/* www/assets/",
+    "cap:sync": "npm run build:web && npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/app": "^6.0.1",
+    "@capacitor/cli": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/status-bar": "^6.0.1"
+  }
+}
